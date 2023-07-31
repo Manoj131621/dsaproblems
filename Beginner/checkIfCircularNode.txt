@@ -1,0 +1,13 @@
+class Solution{
+    bolean isCircular(Node head){
+        if(head==null)
+        return true;
+        Node temp=head;
+        while(temp!=null){
+            temp=temp.next;
+            if(temp==head)
+            return true;
+        }
+        return false;1
+    }
+}
