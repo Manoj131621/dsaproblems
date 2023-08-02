@@ -1,0 +1,26 @@
+Reverse a linked list
+Input:
+LinkedList: 1->2->3->4->5->6
+Output: 6 5 4 3 2 1
+Explanation: After reversing the list, 
+elements are 6->5->4->3->2->1.
+Input:
+LinkedList: 2->7->8->9->10
+Output: 10 9 8 7 2
+Explanation: After reversing the list,
+elements are 10->9->8->7->2.
+-------------------------------------------------
+class Solution{
+    Node reverseList(Node head){
+        Node curr=head;
+        Node prev=null,next=null;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        return prev;
+    }
+}
+// Time Complexity - O(n) Space Complexity - O(1)
